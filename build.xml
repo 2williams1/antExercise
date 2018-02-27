@@ -1,0 +1,17 @@
+<project name="music" default="compile-test">
+
+   <target name="clean">
+      <delete dir="./classes/music" />
+      <delete dir="./test_classes/music" />
+   </target>
+
+   <target name="compile-implementation" depends="clean">
+     <javac srcdir="src" destdir="classes" includeantruntime="true"/>
+   </target>
+
+   <target name="compile-test" depends="compile-implementation">
+     <javac srcdir="test_src" destdir="test_classes" includeantruntime="true" >         
+     </javac>
+   </target>
+
+</project>
